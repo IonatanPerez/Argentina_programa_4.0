@@ -9,10 +9,6 @@
     <h2 id="indice"> Ejemplos de listas</h2>
     <a href="#numeradas">Listas numeradas</a> <a href="#Corridas">Listas corridas</a> <a href="#definiciones">Listas definiciones</a> <a href="#imagenes">Imagenes</a>
 
-    <ol id="numeradas">
-        <li>Primer elemento</li>
-        <li>Segundo elemento</li>
-    </ol>
     <p> Pero tambien puedo decirle donde empezar </p>
     <ol id="Corridas">
         <li value="20">Primer elemento</li>
@@ -47,7 +43,7 @@
 
     <p> Tambien podemos hacer cosas mas complejas que vamos adelante con CSS como por ejemplo</p>
     List 1
-    <ul class="one">
+    <ul class="three">
     <li>List Item1</li>
     <li>List Item2</li>
     <li>List Item3</li>
@@ -79,6 +75,9 @@
     
     <h2 id="imagenes"> Imagenes </h2>
 
+
+
+
     <img src="./Recursos/hormiga.png" alt="Una hormiga"> 
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Camponotus_sp._ant.jpg" alt="Lo mismo desde internet">
     <p> Pero se ve muy grande, vamos a hacerlo mas pequeño...</p>
@@ -87,20 +86,27 @@
     <figure>
         <svg height="150" width="400">
             <defs>
-              <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+              <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:rgb(58, 218, 98);stop-opacity:1" />
                 <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
               </linearGradient>
             </defs>
-            <ellipse cx="200" cy="70" rx="85" ry="15" fill="url(#grad1)" />
+            <ellipse cx="200" cy="70" rx="85" ry="85" fill="url(#grad1)" />
             Sorry, your browser does not support inline SVG.
           </svg>
           <figcaption>Esto es una imagen que generamos con codigo dentro del HTML</figcaption>
     </figure>
     <p> Ahora vamos a ver una opcion que depende del tamaño de la ventana.</p>
+
     <picture>
-        <source media="(min-width: 2000px)" srcset="./Recursos/imagen_mediana.svg">
+        <source media="(min-width: 800px)" srcset="./Recursos/imagen_mediana.svg">
         <img src="./Recursos/imagen_normal.svg" alt="Imagen normal">
     </picture>
+
+    <ol id="numeradas">
+        <li>Primer elemento</li>
+        <li>Segundo elemento</li>
+    </ol>
+    <h2><a href="#indice">Volver al indice</a> </h2>
 </body>
 </html>
