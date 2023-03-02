@@ -1,0 +1,18 @@
+/*
+h2 {
+    color: #152b59;
+    text-shadow: 0px 0px 6px #3369;
+    } 
+*/
+.one {
+    list-style: circle;
+  }
+  
+.two {
+    list-style: square inside;
+  }
+
+.three {
+    list-style: georgian inside url('rocket.svg');
+  }
+  

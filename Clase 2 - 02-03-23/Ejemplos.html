@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplos clase 2</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h2 id="indice"> Ejemplos de listas</h2>
+    <a href="#numeradas">Listas numeradas</a> <a href="#Corridas">Listas corridas</a> <a href="#definiciones">Listas definiciones</a> <a href="#imagenes">Imagenes</a>
+
+    <ol id="numeradas">
+        <li>Primer elemento</li>
+        <li>Segundo elemento</li>
+    </ol>
+    <p> Pero tambien puedo decirle donde empezar </p>
+    <ol id="Corridas">
+        <li value="20">Primer elemento</li>
+        <li>Segundo elemento</li>
+    </ol>
+    
+    <p> O podemos decirle que tipo de lista queremos</p>
+    <ol type="i"> <!-- i romano, I romano mayuscula, a minuscula, A mayuscula -->
+        <li value="20">Primer elemento</li>
+        <li>Segundo elemento</li>
+    </ol>
+
+    <p> O podemos decirle que lo haga en reversa</p>
+    <ol type="A", reversed> 
+        <li>Primer elemento</li>
+        <li>Segundo elemento</li>
+    </ol>
+
+    <p> Para las listas desordenadas podemos cambiar el estilo</p>
+    <ul > 
+        <li>Primer elemento</li>
+        <li>Segundo elemento</li>
+    </ul>
+
+    <h2 id="definiciones"> Ejemplos de definiciones </h2>
+    <dl>
+        <dt>AP 4.0</dt>
+        <dd>Curso Argentina Programa 4.0</dd>
+        <dt>Fiuba</dt>
+        <dd>Facultad de Ingenieria, UBA</dd>
+    </dl>
+
+    <p> Tambien podemos hacer cosas mas complejas que vamos adelante con CSS como por ejemplo</p>
+    List 1
+    <ul class="one">
+    <li>List Item1</li>
+    <li>List Item2</li>
+    <li>List Item3</li>
+    </ul>
+    List 2
+    <ul class="two">
+    <li>List Item A</li>
+    <li>List Item B</li>
+    <li>List Item C</li>
+    </ul>
+    List 3
+    <ul class="three">
+    <li>List Item A</li>
+    <li>List Item B</li>
+    <li>List Item C</li>
+    </ul>
+
+    <h2> Ejemplos de links</h2>
+
+    <p><a href="./Subcarpeta/Ejemplo_complementario.html" target="_blank"> Ver en ventana aparte.</a> </p>
+    <p><a href="https://www.eldiarioar.com/" target="_blank">Link a un diario que se abre en página aparte</a></p>
+    <a href="javascript:alert('Hola mundo!');">Pinchame y te saludo</a> 
+    <h3> Información de contacto</h3>
+    <p> Mandar mail a <a href="mailto:meet202@fi.uba.ar"> meet202@fi.uba.ar</a></p> 
+    <a aria-label="Chat on WhatsApp" href="https://wa.me/549111111111" target="_blank"> Escribinos <img alt="Chat on WhatsApp" src="./Recursos/Whatsapp-Icon-Logo-Small.png" />  </a>
+    <p> Ver la documentacion de como crear los links <a href="https://faq.whatsapp.com/5913398998672934?text=I'm%20interested%20in%20your%20car%20for%20sale" target="_blank"> aqui </a> </p>
+    
+    <h2><a href="#indice">Volver al indice</a> </h2>
+    
+    <h2 id="imagenes"> Imagenes </h2>
+
+    <img src="./Recursos/hormiga.png" alt="Una hormiga"> 
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Camponotus_sp._ant.jpg" alt="Lo mismo desde internet">
+    <p> Pero se ve muy grande, vamos a hacerlo mas pequeño...</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Camponotus_sp._ant.jpg" alt="Lo mismo desde internet" height="80">
+
+    <figure>
+        <svg height="150" width="400">
+            <defs>
+              <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+                <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+              </linearGradient>
+            </defs>
+            <ellipse cx="200" cy="70" rx="85" ry="15" fill="url(#grad1)" />
+            Sorry, your browser does not support inline SVG.
+          </svg>
+          <figcaption>Esto es una imagen que generamos con codigo dentro del HTML</figcaption>
+    </figure>
+    <p> Ahora vamos a ver una opcion que depende del tamaño de la ventana.</p>
+    <picture>
+        <source media="(min-width: 650px)" srcset="./Recursos/imagen_mediana.svg">
+        <img src="./Recursos/imagen_normal.svg" alt="Imagen normal">
+    </picture>
+</body>
+</html>
