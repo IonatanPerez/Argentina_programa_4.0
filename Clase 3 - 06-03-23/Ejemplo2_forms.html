@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1> El resultado de la operacion es: </h1>
-    <p id="demo"></p>
+    <p id="to_complete"></p>
     <script>
         let url = new URL(window.location.href);
         let params = new URLSearchParams(url.search);
@@ -16,7 +16,7 @@
         let b = params.get('segundo');
         let resultado = Number(a) + Number(b);
         window.alert(resultado);
-        document.getElementById("demo").innerHTML = resultado;
+        document.getElementById("to_complete").innerHTML = resultado;
     </script>
 </body>
 </html>

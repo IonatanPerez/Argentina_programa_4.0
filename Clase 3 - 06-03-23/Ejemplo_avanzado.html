@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+</head>
+<body>
+    <table>
+        <caption> Calculadora interactiva </caption>
+        <thead>
+            <tr>
+                <th colspan="3"> Elija la operación que quiere calcular </th>
+            </tr>
+        <tbody>
+        <tbody>
+            <form action="">
+                <tr>
+                    <td> <label for="primero"> Primer numero </label> </td>
+                    <td> <label for="segundo"> Segundo numero </label> </td>
+                    <td> <label><img src="Recursos/mas.png" height="100" /> </label> </td>
+                    <td> <input type="radio" name="cuenta" value="mas" style="align-items: center;"/></td>
+                    <td rowspan="2"> <input type="submit" value="Operar"> </td>
+                    <td rowspan="2"> Resultado: <p id="to_complete"></p> </td>
+                </tr>
+                <tr>
+                    <td> <input type="text" name="primero" id="primero" required> </td>
+                    <td> <input type="text" name="segundo" id="segundo" required> </td>
+                    <td> <label><img src="Recursos/menos.png" height="100" /> </label> </td>
+                    <td> <input type="radio" name="cuenta" value="menos" style="align-items: center;"/></td>
+                </tr>
+            </form>
+        </tbody>
+    </table>
+    <script>
+        let url = new URL(window.location.href);
+        let params = new URLSearchParams(url.search);
+        let a = params.get('primero');
+        let b = params.get('segundo');
+        let resultado = 0;
+        if (params.get('cuenta') == "menos") {
+            resultado = Number(a) - Number(b);
+            document.getElementById("to_complete").innerHTML = resultado;
+        }
+        if (params.get('cuenta') == "mas") {
+            window.alert('Mas');
+            resultado = Number(a) + Number(b);
+            document.getElementById("to_complete").innerHTML = resultado;
+        }
+    </script>
+</body>
+</html>
