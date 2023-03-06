@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado</title>
+</head>
+<body>
+    <h1> El resultado de la operacion es: </h1>
+    <p id="demo"></p>
+    <script>
+        let url = new URL(window.location.href);
+        let params = new URLSearchParams(url.search);
+        let a = params.get('primero');
+        let b = params.get('segundo');
+        let resultado = Number(a) + Number(b);
+        window.alert(resultado);
+        document.getElementById("demo").innerHTML = resultado;
+    </script>
+</body>
+</html>

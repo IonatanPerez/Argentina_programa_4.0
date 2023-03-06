@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplos clase 3</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <table>
+        <caption> Esto es una tabla </caption>
+        <thead>
+            <tr>
+                <th colspan="3"> Información personal. </th>
+            </tr>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+            </tr>
+        <tbody>
+            <tr>
+                <td> Juan Humberto</td>
+                <td> Perez </td>
+                <td align="right"> 20 </td>
+            </tr>
+            <tr>
+                <td> Maria </td>
+                <td> Lopez </td>
+                <td align="right"> 25 </td>
+            </tr>
+            <tr>
+                <td> Pedro </td>
+                <td colspan="2" align="center"> NS/NC </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2"> Promedio: </td>
+                <td align="right"> 22.5</td>
+            </tr>
+            <tr>
+                <td colspan="3" align="center"> Fin de la tabla </td>
+            </tr>
+    </table>
+    <!-- Notar que el header por default esta centrado. -->
+    
+    <form action="" target="_blank">
+        <label for="texto"> Aca se completa un texto: </label>
+        <input type="text" name="texto" placeholder="Ingrese un texto" required>
+        <br>
+        <button type="submit"> Enviar </button>
+        <br>
+        <button type="reset">Este es un <strong>boton de reseteo</strong></button>
+    </form>
+
+    <form action="/my-handling-form-page" method="post" target="_blank">
+        <ul>
+          <li>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="user_name" />
+          </li>
+          <li>
+            <label for="mail">Email:</label>
+            <input type="email" id="mail" name="user_email" />
+          </li>
+          <li>
+            <label for="msg">Message:</label>
+            <textarea id="msg" name="user_message"> Escriba aca su mensaje...</textarea>
+          </li>
+          <li class="button">
+            <button type="submit">Envie su mensaje</button>
+          </li>          
+        </ul>
+      </form>
+      
+      <form>
+        <fieldset>
+          <legend>Fruit juice size</legend>
+          <p>
+            <input type="radio" name="size" id="size_1" value="small">
+            <label for="size_1">Small</label>
+          </p>
+          <p>
+            <input type="radio" name="size" id="size_2" value="medium">
+            <label for="size_2">Medium</label>
+          </p>
+          <p>
+            <input type="radio" name="size" id="size_3" value="large">
+            <label for="size_3">Large</label>
+          </p>
+        </fieldset>
+      </form>
+      
+      <form action="" target="_blank"> 
+        <input type="text" id="comment" name="comment" value="I'm a text field" />
+        <input type="password" id="pwd" name="pwd" />
+        <input type="hidden" id="timestamp" name="timestamp" value="06/03/23" />
+        <input type="checkbox" id="questionOne" name="subscribe" value="yes" checked />
+        <fieldset>
+            <legend>Elegi las verduras</legend>
+            <ul>
+              <li>
+                <label for="carrots">Zanahoria</label>
+                <input
+                  type="checkbox"
+                  id="carrots"
+                  name="vegetable"
+                  value="carrots"
+                  checked />
+              </li>
+              <li>
+                <label for="peas">Arvejas</label>
+                <input type="checkbox" id="peas" name="vegetable" value="peas" />
+              </li>
+              <li>
+                <label for="cabbage">Zapallo</label>
+                <input type="checkbox" id="cabbage" name="vegetable" value="cabbage" />
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>¿Cual es tu comida favorita?</legend>
+            <ul>
+              <li>
+                <label for="sopa">Sopa</label>
+                <input type="radio" id="sopa" name="meal" value="sopa" checked />
+              </li>
+              <li>
+                <label for="milanesa">Milanesa</label>
+                <input type="radio" id="milanesa" name="meal" value="milanesa" />
+              </li>
+              <li>
+                <label for="pizza">Pizza</label>
+                <input type="radio" id="pizza" name="meal" value="pizza" disabled/>
+              </li>
+            </ul>
+          </fieldset>
+          <button type="reset">Reset</button>
+          <button type="submit"> Enviar </button>
+          <input type="submit" value="Esto tambien envia." />
+      </form>
+      <form action="" target="_blank"> 
+        <input type="image" alt="Click me!" src="./Recursos/hormiga.png"/>
+        <input type="file" name="file" id="file" accept="image/*" multiple />
+        <fieldset>
+            <legend>Campos mas avanzados</legend>
+            <input type="email" id="email" name="email" />
+            <input type="search" id="search" name="search" />
+            <label for="age">Edad:</label>
+            <input type="number" name="age" id="age" min="1" max="120" step="1" />
+            <label for="price">Elegir un precio maximo: </label>
+            <input
+            type="range"
+            name="price"
+            id="price"
+            min="50000"
+            max="500000"
+            step="100"
+            value="250000" />
+            <output class="price-output" for="price"></output>
+            <input type="datetime-local" name="datetime" id="datetime" />
+            <input type="time" name="time" id="time" />
+            <input type="color" name="color" id="color" />
+            <select id="groups" name="groups">
+                <optgroup label="fruits">
+                  <option>Banana</option>
+                  <option selected>Cherry</option>
+                  <option>Lemon</option>
+                </optgroup>
+                <optgroup label="vegetables">
+                  <option>Carrot</option>
+                  <option>Eggplant</option>
+                  <option>Potato</option>
+                </optgroup>
+              </select>
+              <select id="multi" name="multi" multiple size="8">
+                <optgroup label="fruits">
+                  <option>Banana</option>
+                  <option selected>Cherry</option>
+                  <option>Lemon</option>
+                </optgroup>
+                <optgroup label="vegetables">
+                  <option>Carrot</option>
+                  <option>Eggplant</option>
+                  <option>Potato</option>
+                </optgroup>
+              </select>
+              <p> Que se autocomplete</p>
+              <label for="myFruit">¿Cual es tu fruta preferida?</label>
+                <input type="text" name="myFruit" id="myFruit" list="mySuggestion" />
+                <datalist id="mySuggestion">
+                <option>Manzana</option>
+                <option>Banana</option>
+                <option>Frutilla</option>
+                <option>Mora</option>
+                <option>Limon</option>
+                <option>Pera</option>
+                <option>Melon</option>
+                <option>Naranja</option>
+                </datalist>
+
+        </fieldset>
+      </form>
+
+      <form action="Ejemplo2_forms.html" target="_blank"> 
+        <fieldset>
+            <legend>Vamos a sumar</legend>
+            <ul>
+                <li>
+                  <label for="primero">Primer numero</label>
+                  <input type="text" id="primero" name="primero"/>
+                </li>
+                <li>
+                  <label for="segundo">Segundo numero</label>
+                  <input type="text" id="segundo" name="segundo"/>
+                </li>
+                <li>
+                    <button type="submit">Sumar</button>
+                </li>
+              </ul>
+      </form>
+      
+</body>
+</html>
