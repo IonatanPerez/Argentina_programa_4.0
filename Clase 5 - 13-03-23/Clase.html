@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplos en clase</title>
+</head>
+<body>
+    <h1> Esta pagina multiplica numeros </h1>
+    <p> El resultado de la cuenta es: <div id="resultado"> </div></p>
+    <script>
+        /*
+        let variable1;
+        variable1 = prompt("Ingrese su nombre:");
+        let apellido;
+        apellido = prompt("Ingrese su apellido:");
+        let saludo = "Hola ";
+        let mensaje = saludo + variable1 + " " + apellido + " " +"como andas?";
+        alert(mensaje);
+        */
+       /*
+        let msg = confirm("Queres seguir o hacemos intervalo?")
+        alert(msg);
+        */
+       /*
+        const PI = 3.14159;
+        PI = 2.7
+        alert(PI);
+        */
+        numero1 = parseFloat(prompt("Ingrese el primer numero:"));
+        numero2 = parseInt(prompt("Ingrese el segundo numero:"));
+        alert (numero1 + numero2)
+        document.getElementById("resultado").innerHTML = numero1 * numero2;
+    </script>
+</body>
+</html>

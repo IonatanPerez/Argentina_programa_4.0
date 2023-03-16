@@ -1,0 +1,1 @@
+alert ("Aca se carga el archivo externo.")
