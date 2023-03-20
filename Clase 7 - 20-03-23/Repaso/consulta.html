@@ -22,7 +22,7 @@
             let numero_final = 0;
             document.getElementById("Completar").innerHTML = "";
             for (let i = numero_inicial; i > numero_final; i = i + paso) {
-                document.getElementById("Completar").innerHTML += i + "<br>";
+                document.getElementById("Completar").innerText += i + "<br>";
             }
             document.getElementById("Completar").innerHTML += msg;
         }
