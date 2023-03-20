@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form action="">
+    <label> Ingrese en cuanto iniciar el contador:</label>
+    <input type="number" name="numero_inicial" id="numero_inicial">
+    <label> Ingrese el mensaje a mostrar:</label>
+    <input type="text" name="msg" id="msg">
+    <button type="button" onclick="contador(document.getElementById('numero_inicial').value,document.getElementById('msg').value)">Iniciar</button>
+</form>
+<p id="Completar"> </p>    
+    <script>
+        function contador(numero_inicial, msg) {
+            numero_inicial = parseInt(numero_inicial);
+            let paso = -1;
+            let numero_final = 0;
+            document.getElementById("Completar").innerHTML = "";
+            for (let i = numero_inicial; i > numero_final; i = i + paso) {
+                document.getElementById("Completar").innerHTML += i + "<br>";
+            }
+            document.getElementById("Completar").innerHTML += msg;
+        }
+        /*let parametros =  new URLSearchParams(window.location.search);
+        alert(parametros.get("nombre") + " " + parametros.get("apellido"))
+        /*
+        let Apellido = paramentros.get ('apellido');
+        let Nombre = paramentros.get ('nombre');
+        let Edad = paramentros.get ('edad');
+        let DNI = parametros.get ('dni');
+        let Correo = parametros.get ('correo');
+        */
+    </script>
+</body>
+</html>

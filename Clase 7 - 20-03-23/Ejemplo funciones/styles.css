@@ -1,0 +1,18 @@
+/* make styles for a form */
+form {
+    width: 400px;
+    margin: 0 auto;
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+}
+
+.tabla_botones {
+    width: 100%;
+    align-items: center;
+}
+
+.boton {
+    color: white;
+    background-color: #4CAF50;
+}

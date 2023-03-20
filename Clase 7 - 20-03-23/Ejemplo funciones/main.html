@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="operaciones.js"></script>
+    <title>Calculadora</title>
+</head>
+<body>
+    <!-- Crear un formulario con una tabla dentro con dos numeros de input que tenga cuatro botones uno para cada operacion matematica: suma resta division y multiplicacion. 
+        Que el formulario no redirija a ningun lado -->
+    <form action="main.html">
+        <table>
+            <tr>
+                <td><label> Primer numero: </label> <input type="number" id="numero3" name="numero1"></td>
+                <td><label> Seguno numero: </label> <input type="number" id="numero4" name="numero2"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                <table class="tabla_botones">
+                    <tr>
+                        <td> <button type="button" class="boton" onclick="operacion('sumar')">Sumar</button> </td>
+                        <td> <button type="button" class="boton" onclick="operacion('restar')">Restar</button> </td>
+                        <td> <button type="button" class="boton" onclick="operacion('multiplicar')">Multiplicar</button> </td>
+                        <td> <button type="button" class="boton" onclick="operacion('dividir')">Dividir</button> </td>        
+                    </tr>
+                </table>
+                </td>
+            </tr>
+            <tr id="caja_resultado">
+                <td> Resultado de la operación: </td> 
+                <td id="resultado"> </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
