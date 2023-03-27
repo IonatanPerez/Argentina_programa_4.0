@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Persona {
+            constructor(nombre, apellido, edad) {
+                this.nombre = nombre;
+                this.apellido = apellido;
+                this.edad = edad;
+            }
+            presentarse() {
+                return "Hola mi nombre es " + this.nombre + " " + this.apellido + " y tengo " + this.edad + " años."
+            }
+        }
+        let numero_personas = prompt("Ingrese el numero de personas a ingresar");
+        personas = [];
+        for (let i = 0; i < numero_personas; i++) {
+            let nombre = prompt("Ingrese el nombre de la persona");
+            let apellido = prompt("Ingrese el apellido de la persona");
+            let edad = prompt("Ingrese la edad de la persona");
+            let persona = new Persona(nombre, apellido, edad);
+            personas.push(persona);
+        }
+        alert (`Se ha ingresado ${personas.length} personas al sistema. A continuación se mostrar en pantalla los datos ingresados.`)
+        for (persona of personas) {
+            console.log(JSON.stringify(persona))
+        }
+    </script>
+</body>
+</html>

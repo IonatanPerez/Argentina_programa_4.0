@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let mivariable = "12i3";
+        mivariable = parseInt(mivariable);
+        console.log(mivariable);
+        console.log(typeof(mivariable))
+        if (typeof(mivariable) == "number") {
+            console.log("Es un numero");
+        } else {
+            console.log("No es un numero");
+        }
+        let suma_parcial = 0;
+        while (input != "fin") {
+            let input = prompt("Ingrese un numero");
+            suma_parcial += parseInt(input);
+        }
+    </script>
+</body>
+</html>

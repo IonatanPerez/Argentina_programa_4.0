@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let valor = "";
+        let valores_originales = [];
+        let seguir = true;
+        while (seguir) {
+            valor = prompt("Ingrese un valor numerico entero o 'salir' para terminar.");
+            if (valor == "salir") {
+                seguir = false;
+                continue;
+            }
+            valor = parseInt(valor);
+            if (Number.isInteger(valor)) {
+                valores_originales.push(valor);
+            }
+        }
+
+        let valores_pares = [];
+        for (numero of valores_originales) {
+            if (numero % 2 == 0) {
+                valores_pares.push(numero);
+            }
+        }
+
+        alert ("De los ingresados, los numeros pares son:")
+        valores_pares.forEach((valor, indice) => {
+            alert(`El nuemero ${indice} que es par es ${valor}`);
+        });
+    </script>
+</body>
+</html>

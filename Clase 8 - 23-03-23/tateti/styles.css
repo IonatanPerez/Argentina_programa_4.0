@@ -1,0 +1,34 @@
+table * {
+    width: 100px;
+    height: 100px;
+    outline: 1px solid #000;
+    text-align: center;
+    position: relative;
+  }
+  
+  @keyframes appear {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  td.cruz::after,
+  td.circulo::before {
+    position: absolute;
+    font-size: 50px;
+    inset: 22px 0;
+    margin: auto;
+    opacity: 0;
+    animation: appear 0.5s forwards;
+  }
+  td.cruz::after {
+    content: "X";
+  }
+  td.circulo::before {
+    content: "O";
+    animation-delay: 0.5s;
+  }
+  

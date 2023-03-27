@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let persona1 = {
+            nombre: "Roxana",
+            apellido: "Gonzalez",
+            edad: 30,
+            presentarse: function(){
+                return "Hola mi nombre es " + this.nombre + " " + this.apellido + " y tengo " + this.edad + " años."
+            }
+        }
+        let persona2 = {
+            nombre: "Pedro",
+            apellido: "Garcia",
+            edad: 25,
+            presentarse: function(){
+                return "Hola mi nombre es " + this.nombre + " " + this.apellido + " y tengo " + this.edad + " años."
+            }
+        }
+        personas = [persona1, persona2];
+        personas.forEach((persona, indice) => {
+            let encabezado = document.createElement("h1")
+            encabezado.innerHTML = indice + ". " + persona.nombre + " " + persona.apellido
+            document.body.appendChild(encabezado);
+            let parrafo = document.createElement("p");
+            parrafo.innerHTML = persona.presentarse();
+            document.body.appendChild(parrafo);
+        });
+    </script>
+</body>
+</html>
